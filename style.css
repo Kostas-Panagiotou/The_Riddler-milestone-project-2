@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Anton:100,200,300,400,500,600,700|Oswald:100,200,300,400,500,600,700');
+
+
+
+                                                                                                /* Style the riddler  with good fonts and catchy image game */
+
+
+.game-title {
+ font-family: "Anton" , "Oswald" ;
+ color: #E42217;
+ font-weight: bold;
+ text-align: center;
+ font-size: 8em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin:0;
+    background: url('assets/images/riddler-background.jpg') no-repeat center center fixed;
+}
+  
+                                                                                                     /* create a container and style them */
+
+
+.game-info-container {
+    grid-column: 1 / -1 ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    font-family: "Anton" , "Oswald" ; 
+    color: #E55451;
+    font-size: 4em;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4 , auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+}
+                                                                                                  /* Add card values front and back on the card */
+
+
+.card {
+    position: relative;
+    height: 175px;
+    width: 125px;   
+}
+
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+}
+                                                                                                 /* Style the cards and rotate to flip over and dont forget to put some transition */                  
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+
+.card-front {
+    border-color: gold;
+    transform: rotateY(180deg);
+    
+}
+
+.card-back {
+    background-color: black;
+    border-color: green;
+}
+
+
+.sign {
+    align-self: center;
+    transition: ;
+    }
+
+.card-back:hover .sign {
+    transform: translateY(0)
+}    
+
+
+
