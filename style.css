@@ -2,6 +2,15 @@
 
 
 
+                                                                                                /* Add a custom cursor grab hand to style the board nice */
+
+
+                                                                                                   
+html {
+    min-height: 100vh;
+    cursor: url("assets/images/touch.png"), auto;
+}
+
                                                                                                 /* Style the riddler  with good fonts and catchy image game */
 
 
@@ -37,6 +46,8 @@ body {
     color: #E55451;
     font-size: 4em;
 }
+                                                                                                     /* Add card values flip front and back on the card inside the container */
+
 
 .game-container {
     display: grid;
@@ -44,8 +55,12 @@ body {
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
+    perspective: 600px;
 }
+  
+
                                                                                                   /* Add card values front and back on the card */
+
 
 
 .card {
@@ -67,38 +82,44 @@ body {
     border-radius: 12px;
     border-width: 1px;
     border-style: solid;
+    transition: transform 600ms ease-in-out;
 }
                                                                                                  /* Style the cards and rotate to flip over and dont forget to put some transition */                  
 
-.card.visible .card-back {
+.card:hover .card-back {
     transform: rotateY(-180deg);
 }
 
-.card.visible .card-front {
+.card:hover .card-front {
     transform: rotateY(0);
 }
 
 
+
 .card-front {
+    border-style: solid;
     border-color: gold;
     transform: rotateY(180deg);
     
 }
 
 .card-back {
+    border-style: solid;
     background-color: black;
     border-color: green;
+
 }
 
 
 .sign {
-    align-self: center;
-    transition: ;
-    }
+    align-self: flex-start;
+    
+}
 
 .card-back:hover .sign {
     transform: translateY(0)
 }    
+
 
 
 
