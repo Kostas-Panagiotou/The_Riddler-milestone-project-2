@@ -19,7 +19,7 @@ html {
  color: #E42217;
  font-weight: bold;
  text-align: center;
- font-size: 8em;
+ font-size: 9em;
 }
 
 * {
@@ -29,7 +29,7 @@ html {
 
 body {
     margin:0;
-    background: url('assets/images/riddler-background.jpg') no-repeat center center fixed;
+    background: url('assets/images/riddler-background.jpg')no-repeat center center fixed;
 }
   
                                                                                                      /* create a container and style them */
@@ -44,7 +44,7 @@ body {
 .game-info {
     font-family: "Anton" , "Oswald" ; 
     color: #E55451;
-    font-size: 4em;
+    font-size: 3em;
 }
                                                                                                      /* Add card values flip front and back on the card inside the container */
 
@@ -55,11 +55,60 @@ body {
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
-    perspective: 600px;
+    perspective: 700px;
 }
   
 
-                                                                                                  /* Add card values front and back on the card */
+                                                                                                  /* Add 3 overlay text to have start screen, game-over screen and win screen with nice texts */
+
+
+.overlay-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: rebeccapurple;
+    font-family: "Anton" ;
+}
+
+.overlay-text-big {
+    font-size: .8em;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms  forwards;
+}
+  
+                                                                                                            /* Add keyframes and style with grow overlay */
+
+
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgb(31, 36, 32);
+        font-size: 0;
+    }
+    to {
+        background-color:rgba(23, 27, 24, 0.8);
+        font-size: 10em;
+    }
+}
+
+  
+   
+   
+                                                                                                                /* Add card values front and back on the card */
 
 
 
@@ -82,15 +131,15 @@ body {
     border-radius: 12px;
     border-width: 1px;
     border-style: solid;
-    transition: transform 600ms ease-in-out;
+    transition: transform 700ms ease-in-out;
 }
                                                                                                  /* Style the cards and rotate to flip over and dont forget to put some transition */                  
 
-.card:hover .card-back {
+.card.visible .card-back {
     transform: rotateY(-180deg);
 }
 
-.card:hover .card-front {
+.card.visible .card-front {
     transform: rotateY(0);
 }
 
@@ -100,14 +149,13 @@ body {
     border-style: solid;
     border-color: gold;
     transform: rotateY(180deg);
-    
 }
 
 .card-back {
     border-style: solid;
     background-color: black;
     border-color: green;
-
+    
 }
 
 
@@ -120,6 +168,17 @@ body {
     transform: translateY(0)
 }    
 
+                                                                                                      /* Media query game .game-info-container */
+
+@media (max-width:600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
 
 
+.game-info-container {
+    flex-direction: column;
+    align-items: center;
+ }
 
+}

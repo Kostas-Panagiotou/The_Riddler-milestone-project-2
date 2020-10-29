@@ -4,10 +4,26 @@
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Riddler</title>
 </head>
-<body>                                                                                     <!-- game card container -->
+<body>                                                                                    
+                                                                                        <!-- Add div class and id class with overlay text for 3 differnt screens dont forget to span -->
+   
     <h1 class="game-title">The Riddler</h1>
+     <div class="overlay-text">
+     Can You Solve The Riddlers?
+    <br> Press Start to begin?
+     </div>
+    <div id="game-over-text"  class="overlay-text">
+    <span class="overlay-text-big"> Bang Bang Batsy!!!</span><br>GAME OVER!!
+     <span class="overlay-text-small">Click to Restart</span>
+     </div>
+    <div id="win-text"  class="overlay-text">
+     Hey Bats.. You Win! This time!
+    <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    
+                                                                                                               <!-- Add game card,game container,info -->
     <div class="game-container">
        <div class="game-info-container">
           <div class="game-info">
@@ -16,8 +32,9 @@
          <div class="game-info">
           Flips <span id="flips">0</span>
           </div>
-       </div>                                                                                    <!-- card images and styles -->
-         
+       </div>                                                                                            
+                                                                                                      <!-- card images and styles and  16 cards with 8 differnt images -->
+             
          <div class="card">
             <div class ="card-back card-face">
             <img class="card-value" src="assets/images/sign.png">
@@ -25,7 +42,7 @@
              <div class="card-front card-face">
              </div>
              <img class="card-value" src="assets/images/batman.png">
-         </div>                                                                                       <!-- 16 cards with 8 differnt images -->
+         </div>                                                                                         
         
          <div class="card">
             <div class ="card-back card-face">
@@ -152,7 +169,7 @@
              </div>
              <img class="card-value" src="assets/images/dick.png">
          </div>                                                        
-    
+       
     <div class="card">
             <div class ="card-back card-face">
             <img class="card-value" src="assets/images/sign.png">
@@ -161,7 +178,7 @@
              </div>
              <img class="card-value" src="assets/images/dick.png">
          </div>                                                        
-
+   
     </div>
 
                                                                                                                     <!-- Add a footer with infos -->
