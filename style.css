@@ -77,7 +77,7 @@ body {
 }
 
 .overlay-text-big {
-    font-size: .8em;
+    font-size: .3em;
 }
 
 .overlay-text-small {
@@ -135,6 +135,7 @@ body {
 }
                                                                                                  /* Style the cards and rotate to flip over and dont forget to put some transition */                  
 
+
 .card.visible .card-back {
     transform: rotateY(-180deg);
 }
@@ -169,6 +170,7 @@ body {
 }    
 
                                                                                                       /* Media query game .game-info-container */
+
 
 @media (max-width:600px) {
     .game-container {
