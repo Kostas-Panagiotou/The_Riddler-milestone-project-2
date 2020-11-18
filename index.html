@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <link href="style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="assets/script.js" async></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Riddler</title>
@@ -11,19 +9,18 @@
 <body>                                                                                    
                                                                                         <!-- Add div class and id class with overlay text for 3 differnt screens dont forget to span -->
    
-    <h1 class="game-title" >The Riddler</h1>
-     <div class="overlay-text visible">
-     Solve The Riddlers?   
-    <br> Press Start to begin? 
+ <h1 class="game-title" >The Riddler</h1>
+ <div class="overlay-text visible">
+   Riddle me This?   
      </div>
     
-    <div id="game-over-text"  class="overlay-text ">
-    <span class="overlay-text-big"> Bang Bang Batsy!!!</span><br>GAME OVER!!
+    <div id="game-over-text"  class="overlay-text">
+    <span class="overlay-text-big"> Bang Bang Batsy!!!</span>GAME OVER!!
      <span class="overlay-text-small">Click to Restart</span>
      </div>
      
     <div id="win-text"  class="overlay-text">
-     Hey Bats.. You Win! This time!
+    <span class="overlay-text-big"> Hey Bats..You Win This time!</span>You Win!
     <span class="overlay-text-small">Click to Restart</span>
      </div>
     
@@ -31,7 +28,7 @@
     <div class="game-container">
        <div class="game-info-container">
           <div class="game-info">
-          Time <span id="time-remaining">100</span>
+          Time <span id="time-remaining">49</span>
           </div>
          <div class="game-info">
           Flips <span id="flips">0</span>
@@ -189,7 +186,8 @@
 
 <footer>
 Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="assets/script.js" async></script>
 </footer>
 </body>
 </html>

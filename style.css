@@ -19,7 +19,7 @@ html {
  color: #E42217;
  font-weight: bold;
  text-align: center;
- font-size: 9em;
+ font-size: 8em;
 }
 
 * {
@@ -81,13 +81,14 @@ body {
 }
 
 .overlay-text-small {
-    font-size: .3em;
+    font-size: .2em;
 }
 
 .overlay-text.visible {
     display: flex;
     flex-direction: column;
     animation: overlay-grow 500ms  forwards;
+    font-size: .1m;
 }
   
                                                                                                             /* Add keyframes and style with grow overlay */
@@ -96,7 +97,7 @@ body {
 
 @keyframes overlay-grow {
     from {
-        background-color: rgb(31, 36, 32);
+        background-color: rgba(31, 36, 32);
         font-size: 0;
     }
     to {
@@ -172,10 +173,10 @@ body {
                                                                                                       /* Media query game .game-info-container */
 
 
-@media (max-width:600px) {
-    .game-container {
-        grid-template-columns: repeat(2, auto);
-    }
+@media screen and (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto)
+  }
 
 
 .game-info-container {
