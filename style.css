@@ -1,187 +1,191 @@
 @import url('https://fonts.googleapis.com/css?family=Anton:100,200,300,400,500,600,700|Oswald:100,200,300,400,500,600,700');
 
+/* Add a custom cursor grab hand to style the board nice */
 
-
-                                                                                                /* Add a custom cursor grab hand to style the board nice */
-
-
-                                                                                                   
 html {
-    min-height: 100vh;
-    cursor: url("assets/images/touch.png"), auto;
+	min-height: 100vh;
+	cursor: url("assets/images/touch.png"), auto;
 }
 
-                                                                                                /* Style the riddler  with good fonts and catchy image game */
 
+/* Style the riddler  with good fonts and catchy image game */
 
 .game-title {
- font-family: "Anton" , "Oswald" ;
- color: #E42217;
- font-weight: bold;
- text-align: center;
- font-size: 8em;
+	font-family: "Anton", "Oswald";
+	color: #E42217;
+	font-weight: bold;
+	text-align: center;
+	font-size: 8em;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 
 body {
-    margin:0;
-    background: url('assets/images/riddler-background.jpg')no-repeat center center fixed;
+	margin: 0;
+	background: url('assets/images/riddler-background.jpg')no-repeat center center fixed;
 }
-  
-                                                                                                     /* create a container and style them */
 
+
+/* create a container and style them */
 
 .game-info-container {
-    grid-column: 1 / -1 ;
-    display: flex;
-    justify-content: space-between;
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: space-between;
 }
 
 .game-info {
-    font-family: "Anton" , "Oswald" ; 
-    color: #E55451;
-    font-size: 3em;
+	font-family: "Anton", "Oswald";
+	color: #E55451;
+	font-size: 3em;
 }
-                                                                                                     /* Add card values flip front and back on the card inside the container */
 
+
+/* Add card values flip front and back on the card inside the container */
 
 .game-container {
-    display: grid;
-    grid-template-columns: repeat(4 , auto);
-    grid-gap: 10px;
-    margin: 50px;
-    justify-content: center;
-    perspective: 700px;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-gap: 10px;
+	margin: 50px auto;
+	justify-content: center;
+	perspective: 500px;
 }
-  
 
-                                                                                                  /* Add 3 overlay text to have start screen, game-over screen and win screen with nice texts */
 
+/* Add 3 overlay text to have start screen, game-over screen and win screen with nice texts */
 
 .overlay-text {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    color: rebeccapurple;
-    font-family: "Anton" ;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	color: rebeccapurple;
+	font-family: "Anton";
+	flex-direction: column;
+	transition: background-color 500ms, font-size 500ms;
 }
 
 .overlay-text-big {
-    font-size: .3em;
+	font-size: .3em;
 }
 
 .overlay-text-small {
-    font-size: .2em;
+	font-size: .2em;
 }
 
 .overlay-text.visible {
-    display: flex;
-    flex-direction: column;
-    animation: overlay-grow 500ms  forwards;
-    font-size: .1m;
+	display: flex;
+	flex-direction: column;
+	animation: overlay-grow 500ms forwards;
+	font-size: .1m;
 }
-  
-                                                                                                            /* Add keyframes and style with grow overlay */
 
 
+/* Add keyframes and style with grow overlay */
 
 @keyframes overlay-grow {
-    from {
-        background-color: rgba(31, 36, 32);
-        font-size: 0;
-    }
-    to {
-        background-color:rgba(23, 27, 24, 0.8);
-        font-size: 10em;
-    }
+	from {
+		background-color: rgba(31, 36, 32);
+		font-size: 0;
+	}
+	to {
+		background-color: rgba(23, 27, 24, 0.8);
+		font-size: 10em;
+	}
 }
 
-  
-   
-   
-                                                                                                                /* Add card values front and back on the card */
 
-
+/* Add card values front and back on the card */
 
 .card {
-    position: relative;
-    height: 175px;
-    width: 125px;   
+	position: relative;
+	height: 175px;
+	width: 125px;
 }
-
 
 .card-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    border-width: 1px;
-    border-style: solid;
-    transition: transform 700ms ease-in-out;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	backface-visibility: hidden;
+	border-radius: 12px;
+	border-width: 1px;
+	border-style: solid;
+	transition: transform 500ms ease-in-out;
 }
-                                                                                                 /* Style the cards and rotate to flip over and dont forget to put some transition */                  
 
 
-.card.visible .card-back {
-    transform: rotateY(-180deg);
-}
+/* Style the cards and rotate to flip over and dont forget to put some transition */
 
 .card.visible .card-front {
-    transform: rotateY(0);
+	transform: rotateY(0);
 }
 
-
+.card.visible .card-back {
+	transform: rotateY(-180deg);
+}
 
 .card-front {
-    border-style: solid;
-    border-color: gold;
-    transform: rotateY(180deg);
+	border-style: solid;
+	border-color: gold;
+	transform: rotateY(180deg);
 }
 
 .card-back {
-    border-style: solid;
-    background-color: black;
-    border-color: green;
-    
+	border-style: solid;
+	background-color: black;
+	border-color: green;
+	transform: rotateY(0);
 }
 
-
-.sign {
-    align-self: flex-start;
-    
+.card-front:hover .card-value {
+	transform: scale(1);
 }
 
 .card-back:hover .sign {
-    transform: translateY(0)
-}    
+	transform: translateY(0)
+}
 
-                                                                                                      /* Media query game .game-info-container */
+.sign {
+	align-self: flex-start;
+	transition: transform 100ms ease-in-out;
+	transform: translateY(-10px);
+}
 
+
+/* Media query game .game-info-container */
 
 @media screen and (max-width: 600px) {
-  .game-container {
-    grid-template-columns: repeat(2, auto)
-  }
+	.game-container {
+		grid-template-columns: repeat(2, auto)
+	}
+	.game-info-container {
+		flex-direction: column;
+		align-items: center;
+	}
+}
 
 
-.game-info-container {
-    flex-direction: column;
-    align-items: center;
- }
+/* Footer details*/
 
+.contanct-title {
+	display: list-item;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 0;
+	color: #fafafa;
+	font-size: 14px;
 }
