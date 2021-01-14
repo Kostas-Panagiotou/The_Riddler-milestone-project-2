@@ -23,7 +23,7 @@ The project starts for the  love of the comics and cards ohh boy !!and now codin
 * JAVASCRIPT
 
 ## Play
-Is very easy to play this game when the starting screen asks you can you solve the riddle you just press enter after that the time is begin to run and you must matched the cards before the time is over.. Good Luck! This is a  link for the game// .https://lordcostas.github.io/The-Riddler/
+Is very easy to play this game when the starting screen asks you can you solve the riddle you just press enter after that the time is begin to run and you must matched the cards before the time is over.. Good Luck! This is a  link for the game// https://lordcostas.github.io/The_Riddler/
 
 
 ## Status
