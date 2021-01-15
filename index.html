@@ -1,185 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <link href="style.css" rel="stylesheet">
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>The Riddler</title>
-</head>
-<body>
-   <!-- Add div class and id class with overlay text for 3 differnt screens dont forget to span -->
-    <h1 class="game-title" >The Riddler</h1>
-    <div class="overlay-text visible">
-   Riddle me This?
-   </div>
-    
-   <div id="game-over-text" class="overlay-text">
-   <span class="overlay-text-big"> Bang Bang Batsy!!!</span>GAME OVER!!
-   <span class="overlay-text-small">Click to Restart</span>
-   </div>
-    
-   <div id="win-text" class="overlay-text">
-   <span class="overlay-text-big"> Hey Bats..You Win This time!</span>You Win!
-   <span class="overlay-text-small">Click to Restart</span>
-   </div>
-    
-   <!-- Add game card,game container,info -->
-    
-   <div class="game-container">
-   <div class="game-info-container">
-   <div class="game-info">
-   Time <span id="time-remaining">39</span>
-   </div>
-   <div class="game-info">
-   Flips <span id="flips">0</span>
-   </div>
-   </div>
-    
-   <!-- card images and styles and 16 cards with 8 differnt images -->
-    
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/batman.png" alt="batman">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/nigma.png" alt="nigma">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/joker.png" alt="joker">   
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png"  alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/nigma.png" alt="nigma">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png"  alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/batman.png" alt="batman">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png"  alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/joker.png"  alt="joker">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png"  alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/harley.png" alt="harley">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png"  alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/harley.png" alt="harley">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/catwomen.png" alt="catwomen">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/catwomen.png" alt="catwomen">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/penguin.png"  alt="penguin">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/penguin.png"  alt="penguin">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/sid.png"  alt="sid">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/sid.png" alt="sid"> 
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png" alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/dick.png" alt="dick">
-   </div>
-   </div>
-   <div class="card">
-   <div class ="card-back card-face">
-   <img class="sign" src="assets/images/sign.png"  alt="sign">
-   </div>
-   <div class="card-front card-face">
-   <img class="card-value" src="assets/images/dick.png" alt="dick"  >
-   </div>
-   </div>
-   </div>
-   <!-- Add a footer with infos -->
-   <footer>
-      <div class="contanct-title">
-      <h4>All names and logos <a href="https://www.dccomics.com/" target="_blank">DC Comics USA</a> <br>
-         This Game is in no way endorsed by DC Comics
-         <br />
-      </h4>
-      <h4>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></h4>
-      <h4>Game written and designed by <a href="https://github.com/lordcostas/milestone-project-1-IDLES"  target="_blank">Kostas Panagiotou</a>2020</h4>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+      <title>The Riddler</title>
+   </head>
+   <body>
+      <!-- Add div class and id class with overlay text for 3 differnt screens dont forget to span -->
+      <h1 class="game-title" >The Riddler</h1>
+      <div class="overlay-text visible">
+         Riddle me This?
       </div>
-       <!--Scripts-->
-      <script src="assets/script.js" async></script>
-      <script src= "https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-       <!--Scripts-->
-   </footer>
-</body>
+      <div id="game-over-text" class="overlay-text">
+         <span class="overlay-text-big"> Bang Bang Batsy!!!</span>GAME OVER!!
+         <span class="overlay-text-small">Click to Restart</span>
+      </div>
+      <div id="win-text" class="overlay-text">
+         <span class="overlay-text-big"> Hey Bats..You Win This time!</span>You Win!         
+         <span class="overlay-text-small">Click to Restart</span>
+      </div>
+      <!-- Add game card,game container,info --> 
+      <div class="game-container">
+         <div class="game-info-container">
+            <div class="game-info">
+               Time <span id="time-remaining">39</span>
+            </div>
+            <div class="game-info">
+               Flips <span id="flips">0</span>
+            </div>
+         </div>
+         <!-- card images and styles and 16 cards with 8 differnt images -->
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/batman.png" alt="batman">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/nigma.png" alt="nigma">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/joker.png" alt="joker">   
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png"  alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/nigma.png" alt="nigma">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png"  alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/batman.png" alt="batman">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png"  alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/joker.png"  alt="joker">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png"  alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/harley.png" alt="harley">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png"  alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/harley.png" alt="harley">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/catwomen.png" alt="catwomen">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/catwomen.png" alt="catwomen">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/penguin.png"  alt="penguin">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/penguin.png"  alt="penguin">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/sid.png"  alt="sid">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/sid.png" alt="sid"> 
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png" alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/dick.png" alt="dick">
+            </div>
+         </div>
+         <div class="card">
+            <div class ="card-back card-face">
+               <img class="sign" src="assets/images/sign.png"  alt="sign">
+            </div>
+            <div class="card-front card-face">
+               <img class="card-value" src="assets/images/dick.png" alt="dick"  >
+            </div>
+         </div>
+      </div>
+      <!-- Add a footer with infos -->
+      <footer>
+         <div class="contanct-title">
+            <h4>All names and logos &#169; <a href="https://www.dccomics.com/" target="_blank">DC Comics USA</a> <br>
+               This Game is in no way endorsed by DC Comics
+               <br />
+            </h4>
+            <h4>Game written and designed by <a href="https://github.com/lordcostas/milestone-project-1-IDLES"  target="_blank">Kostas Panagiotou</a> &#169; 2020</h4>
+         </div>
+         <!--Scripts-->
+         <script src= "https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+         <script src="assets/script.js" async></script>
+         <!--Scripts-->
+      </footer>
+   </body>
 </html>

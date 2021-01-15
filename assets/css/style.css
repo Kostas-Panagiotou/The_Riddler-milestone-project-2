@@ -4,7 +4,7 @@
 
 html {
 	min-height: 100vh;
-	cursor: url("assets/images/touch.png"), auto;
+	cursor: url("../images/touch.png"), auto;
 }
 
 
@@ -24,7 +24,7 @@ html {
 
 body {
 	margin: 0;
-	background: url('assets/images/riddler-background.jpg')no-repeat center center fixed;
+	background: url('../images/riddler-background.jpg')no-repeat center center fixed;
 }
 
 
@@ -181,11 +181,8 @@ body {
 /* Footer details*/
 
 .contanct-title {
-	display: list-item;
-	align-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	bottom: 0;
-	color: #fafafa;
-	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	color: rgb(155, 112, 4);
+	display: inline;
 }

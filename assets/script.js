@@ -7,11 +7,11 @@ class TheRiddler {
 		this.timeRemaining = totalTime;
 		this.timer = document.getElementById('time-remaining');
 		this.ticker = document.getElementById('flips');
-		
+
 	}
 	// Add start game function for start the game and restart  also card to check when are matched or dont and add this occupy to wait until the card is matched//
-    // Add a timeout when is shuffle the cards and a timer//
-    startGame() {
+	// Add a timeout when is shuffle the cards and a timer//
+	startGame() {
 		this.cardToCheck = null;
 		this.totalClicks = 0;
 		this.timeRemaining = this.totalTime;
@@ -53,7 +53,7 @@ class TheRiddler {
 		document.getElementById('win-text').classList.add('visible');
 	}
 
-      // flip card + cant flipcard variable and if statement when you can not flip card and else statement when is card to check//
+	// flip card + cant flipcard variable and if statement when you can not flip card and else statement when is card to check//
 	flipCard(card) {
 		if (this.canFlipCard(card)) {
 			this.totalClicks++;
@@ -66,11 +66,11 @@ class TheRiddler {
 				this.cardToCheck = card;
 		}
 	}
-         // cant flip function if this is occupy wait until is ready and if this matched cards and  the cards is the card to check//
+	// cant flip function if this is occupy wait until is ready and if this matched cards and  the cards is the card to check//
 	canFlipCard(card) {
 		return !this.occupy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
 	}
-          // checking the match for the cards with the if method and this get card type is the card to check  else function the card is a mismatch and finally this card is null//
+	// checking the match for the cards with the if method and this get card type is the card to check  else function the card is a mismatch and finally this card is null//
 	checkForCardMatch(card) {
 		if (this.getCardType(card) === this.getCardType(this.cardToCheck))
 			this.cardMatch(card, this.cardToCheck);
@@ -82,8 +82,8 @@ class TheRiddler {
 
 	}
 
-       // card matching  and push method with card1 and card2 adding classlist also add the matched class//
-       // and if is the matched cards this is a winner//
+	// card matching  and push method with card1 and card2 adding classlist also add the matched class//
+	// and if is the matched cards this is a winner//
 	cardMatch(card1, card2) {
 		this.matchedCards.push(card1);
 		this.matchedCards.push(card2);
@@ -94,7 +94,7 @@ class TheRiddler {
 			this.winner();
 
 	}
-     // when you have a miss match of the card1 and card 2 wait for the player to see the cards before flips again to normal this sets with the timeout and miliseconds//
+	// when you have a miss match of the card1 and card 2 wait for the player to see the cards before flips again to normal this sets with the timeout and miliseconds//
 	cardMisMatch(card1, card2) {
 		this.occupy = true;
 		setTimeout(() => {
@@ -105,7 +105,7 @@ class TheRiddler {
 
 	}
 
-        // interact with the html value of the front of the cards and return//
+	// interact with the html value of the front of the cards and return//
 	getCardType(card) {
 		return card.getElementsByClassName('card-value')[0].src;
 	}
