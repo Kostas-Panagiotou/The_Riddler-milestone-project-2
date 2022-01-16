@@ -24,8 +24,11 @@ html {
 
 body {
 	margin: 0;
-	background: url('../images/riddler-background.jpg')no-repeat center center fixed;
+	background: url('../images/riddler-background.jpg') no-repeat center center fixed; 
+    
 }
+
+
 
 
 /* create a container and style them */
@@ -58,6 +61,8 @@ body {
 /* Add 3 overlay text to have start screen, game-over screen and win screen with nice texts */
 
 .overlay-text {
+	margin: 0;
+	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -176,6 +181,17 @@ body {
 		align-items: center;
 	}
 }
+
+
+@keyframes hero-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
 
 
 /* Footer details*/
