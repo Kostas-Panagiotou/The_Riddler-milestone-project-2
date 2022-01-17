@@ -1,6 +1,6 @@
 <h1 align="center">The Riddler</h1>
 
-[View the live project here.](https://lordcostas.github.io/The_Riddler/)
+[View the live project here.](https://kostas-panagiotou.github.io/The_Riddler-milestone-project-2/)
 
 This is my Milestone Project 2. It is a Mix and Match Card Game, base and inspired by the DC Comics.
 
